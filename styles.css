@@ -1,0 +1,156 @@
+html,
+body {
+  overflow: auto;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 45vh;
+  /* background-image: url("../wedding decor/shivParvatiWedding.jpg"); */
+  color: aliceblue;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 5vh;
+  position: sticky;
+  top: 0;
+}
+
+#logo {
+  font-weight: bolder;
+  font-size: 2em;
+  margin-left: 0;
+}
+
+#intro {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 40%;
+}
+
+a {
+  margin-right: 20px;
+}
+
+a img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  height: 5vh;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+li {
+  display: inline-block;
+  margin: 1em;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+a:active {
+  color: azure;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+table {
+  display: grid;
+  width: 70vw;
+}
+
+td {
+  padding: 1em;
+  align-content: center;
+}
+
+section {
+  height: auto;
+  border: 0.1em solid rgb(236, 234, 234);
+  border-radius: 0.2em;
+  padding: 0.5vw 15vw;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 46.6vh;
+  }
+  nav {
+    height: 5vh;
+    /* background-color: rgb(42, 43, 43); */
+  }
+  #intro {
+    height: 40vh;
+    padding: 0.8vh;
+    flex-direction: column;
+  }
+
+  #designation {
+    text-align: center;
+  }
+  .checkbtn {
+    display: block;
+    margin-left: 10px;
+    padding: 5px;
+  }
+
+  ul {
+    position: fixed;
+    top: 0vh;
+    right: -110vw;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    top: 8vh;
+    right: 0;
+  }
+}
