@@ -49,6 +49,7 @@ a img {
 
 ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   height: 5vh;
@@ -72,12 +73,15 @@ a:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-a:active {
-  color: azure;
+a#active {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
+  border: 0.1em solid rgba(255, 255, 255, 0.6);
+  border-radius: 10%;
 }
 
 .checkbtn {
-  font-size: 30px;
+  font-size: 2em;
   color: white;
   cursor: pointer;
   display: none;
@@ -108,10 +112,12 @@ section {
   header {
     height: 46.6vh;
   }
+
   nav {
-    height: 5vh;
+    height: 3vh;
     /* background-color: rgb(42, 43, 43); */
   }
+
   #intro {
     height: 40vh;
     padding: 0.8vh;
@@ -121,6 +127,7 @@ section {
   #designation {
     text-align: center;
   }
+
   .checkbtn {
     display: block;
     margin-left: 10px;
@@ -149,8 +156,8 @@ section {
     font-size: 20px;
   }
 
-  #check:checked ~ ul {
-    top: 8vh;
+  #check:checked~ul {
+    top: 4vh;
     right: 0;
   }
 }
