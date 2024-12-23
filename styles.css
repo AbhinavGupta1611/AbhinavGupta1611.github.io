@@ -7,10 +7,11 @@ body {
 }
 
 header {
-  height: 45vh;
-  /* background-image: url("../wedding decor/shivParvatiWedding.jpg"); */
+  height: 50vh;
+  background-image: url(./images/publications.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
   color: aliceblue;
-  background-color: black;
 }
 
 nav {
@@ -38,13 +39,7 @@ nav {
 }
 
 a {
-  margin-right: 20px;
-}
-
-a img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  margin-right: 0.5em;
 }
 
 ul {
@@ -59,13 +54,13 @@ ul {
 
 li {
   display: inline-block;
-  margin: 1em;
+  margin: 0.5em;
 }
 
 ul li a {
   text-decoration: none;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -74,7 +69,7 @@ a:hover {
 }
 
 a#active {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   padding: 0.5em;
   border: 0.1em solid rgba(255, 255, 255, 0.6);
   border-radius: 10%;
