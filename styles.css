@@ -328,14 +328,24 @@ main {
     /* Add padding inside the main content */
 }
 
-.about-me {
+/* .about-me {
     max-width: 900px;
     /* Maximum width for the about me section */
-    margin: 0 auto;
-    /* Center align content */
+
+
+/* Section Layout */
+section {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 1rem;
 }
 
-.about-me h2 {
+section h2 {
     font-size: 2.8rem;
     /* Larger heading */
     margin-bottom: 1.2rem;
@@ -348,7 +358,8 @@ main {
     /* Clean font */
 }
 
-.about-me p {
+section p,
+section article {
     font-size: 1.2rem;
     /* Slightly larger font size */
     color: #555;
@@ -363,23 +374,7 @@ main {
     /* Limit width for better readability */
     margin: 0 auto;
     /* Center-align the paragraph */
-}
-
-/* Section Layout */
-section {
-    padding: 2rem;
-    /* Padding for all sections */
-    display: flex;
-    flex-direction: column;
-    /* Stack items vertically */
-    justify-content: center;
-    /* Center content vertically */
-    align-items: center;
-    /* Center content horizontally */
-}
-
-section#publications {
-    align-items: normal;
+    padding: 0.5rem;
 }
 
 /* Footer */
