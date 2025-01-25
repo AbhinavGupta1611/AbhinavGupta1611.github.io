@@ -2,378 +2,233 @@
 html,
 body {
     overflow: auto;
-    /* Ensure scrolling if content overflows */
     height: 100vh;
-    /* Full viewport height */
     margin: 0;
-    /* Remove default margins */
     padding: 0;
-    /* Remove default padding */
     font-family: 'Roboto', sans-serif;
-    /* Use modern and readable font */
     color: #333;
-    /* Set text color to dark gray for better contrast */
     box-sizing: border-box;
-    /* Include padding and border in element's total width and height */
 }
 
 /* Global styles for images */
 img {
     max-width: 100%;
-    /* Ensure responsive images */
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 10px;
-    /* Rounded corners for images */
 }
 
 /* Header Section */
 header {
     height: 50vh;
-    /* Height set to 50% of the viewport */
     background-image: url(./images/publications.jpg);
-    /* Background image for the header */
     background-size: cover;
-    /* Cover the entire area */
     background-position: center;
-    /* Center the background image */
     color: aliceblue;
-    /* Light text color for contrast */
     position: relative;
-    /* Relative positioning for child elements */
     transition: background-color 0.3s ease;
-    /* Smooth transition for background color */
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
-    /* Flexbox layout for navigation */
     justify-content: space-between;
-    /* Space out items (logo and links) */
     align-items: center;
-    /* Vertically center the items */
     padding: 1.5em 2.5em;
-    /* Add padding for better touch targets */
     height: 8vh;
-    /* 8% of viewport height */
     position: sticky;
-    /* Stick to the top when scrolling */
     top: 0;
-    /* Stick to top of viewport */
     background-color: rgba(0, 0, 0, 0.6);
-    /* Semi-transparent background */
     z-index: 100;
-    /* Ensure it's above other content */
     transition: background-color 0.3s ease;
-    /* Smooth transition for background color */
 }
 
 /* Logo Styling */
 #logo {
     font-weight: 600;
-    /* Bold font for the logo */
     font-size: 2em;
-    /* Large font size for logo */
     color: white;
-    /* White color for logo */
     margin-left: 0;
-    /* Remove margin on the left */
 }
 
-/* Logo Link */
 #logo a {
     color: inherit;
-    /* Inherit color from parent */
     text-decoration: none;
-    /* Remove underline from the link */
     font-family: 'Open Sans', sans-serif;
-    /* Clean and modern font */
 }
 
 /* Menu Items */
 ul {
     display: flex;
-    /* Horizontal layout for menu items */
     flex-wrap: wrap;
-    /* Wrap items if there's not enough space */
-    list-style-type: none;
-    /* Remove bullet points from list */
+    list-style: none;
     margin: 0;
     padding: 0;
     height: 5vh;
-    /* Height of the navigation bar */
     align-items: center;
-    /* Vertically center menu items */
     justify-content: flex-end;
-    /* Align items to the right */
     transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Smooth transition for sliding and fading */
 }
 
-/* Menu Item Styling */
 li {
     display: inline-block;
-    /* Inline-block for individual menu items */
     margin: 0.5em;
-    /* Space between items */
 }
 
-/* Menu Links */
 ul li a {
     text-decoration: none;
-    /* Remove underline from links */
     color: white;
-    /* White text color */
     font-weight: 400;
-    /* Normal weight */
     text-transform: uppercase;
-    /* Uppercase text */
     padding: 0.7em;
-    /* Add padding around text */
     font-size: 1.1em;
-    /* Slightly larger font size */
     transition: color 0.3s ease, background-color 0.3s ease;
-    /* Smooth transitions for color changes */
 }
 
-/* Hover effect for menu items */
 a:hover {
     color: rgba(255, 255, 255, 0.8);
-    /* Lighter color on hover */
     background-color: rgba(255, 255, 255, 0.2);
-    /* Semi-transparent background on hover */
 }
 
-/* Active Link Styling */
 a#active {
     color: rgba(255, 255, 255, 0.8);
-    /* Lighter color for active link */
     border: 0.05em solid rgba(255, 255, 255, 0.6);
-    /* Border around active link */
     border-radius: 5%;
-    /* Rounded corners for active link */
 }
 
 /* Hamburger Menu Icon */
 .checkbtn {
     font-size: 2.5em;
-    /* Larger size for better visibility */
     color: white;
-    /* White color for the icon */
     cursor: pointer;
-    /* Pointer cursor for clickable icon */
     display: none;
-    /* Hide by default on larger screens */
     z-index: 101;
-    /* Ensure it's above the navigation */
     transition: transform 0.3s ease;
-    /* Smooth transition for icon transformation */
 }
 
 #check {
     display: none;
-    /* Hide checkbox input */
 }
 
 /* Mobile-Specific Styles */
 @media (max-width: 768px) {
-
-    /* Adjust styles for smaller screens (mobile devices) */
     header {
         height: 45vh;
-        /* Smaller header on mobile */
     }
 
     nav {
         height: 10vh;
-        /* Increase navbar height for easier touch on mobile */
     }
 
     #logo {
         font-size: 1.5em;
-        /* Smaller logo on mobile */
     }
 
     .checkbtn {
         display: block;
-        /* Show hamburger icon on mobile */
         position: absolute;
-        /* Absolute positioning */
         top: 1.5em;
-        /* Space from top */
         right: 1.5em;
-        /* Space from right */
     }
 
     ul {
         position: fixed;
-        /* Fix menu to the screen */
         top: 0;
-        /* Align to top */
         right: -100%;
-        /* Hide menu off-screen */
         background-color: black;
-        /* Black background for mobile menu */
         width: 100%;
-        /* Full width */
         height: 100vh;
-        /* Full viewport height */
         display: flex;
         flex-direction: column;
-        /* Stack items vertically */
         justify-content: center;
-        /* Center items vertically */
         align-items: center;
-        /* Center items horizontally */
         transition: transform 0.5s ease, opacity 0.5s ease;
-        /* Smooth slide-in transition */
         transform: translateX(100%);
-        /* Initially off-screen */
         opacity: 0;
-        /* Initially hidden */
     }
 
     ul li {
         margin: 20px 0;
-        /* Space between menu items */
         opacity: 0;
-        /* Hide items initially */
         transition: opacity 0.3s ease 0.3s;
-        /* Fade-in delay */
     }
 
     ul li a {
         font-size: 1.4em;
-        /* Larger font for mobile */
         padding: 1em 2em;
-        /* Larger touch targets */
     }
 
-    /* When checkbox is checked, show the menu */
     #check:checked~ul {
         right: 0;
-        /* Slide in menu */
         transform: translateX(0);
-        /* Align to screen */
         opacity: 1;
-        /* Make menu visible */
     }
 
-    /* Change hamburger icon to close icon */
     #check:checked~.checkbtn {
         content: "\f00d";
-        /* Font Awesome "close" icon */
         font-family: "Font Awesome 5 Free";
-        /* Ensure Font Awesome is loaded */
         font-weight: 900;
-        /* Bold close icon */
         font-size: 2.5em;
-        /* Larger size */
         top: 1em;
-        /* Space from top */
         right: 1.5em;
-        /* Space from right */
         transform: rotate(180deg);
-        /* Rotate the icon */
     }
 
-    /* Fade-in effect for menu items */
     #check:checked~ul li {
         opacity: 1;
-        /* Make items visible */
         transition: opacity 0.3s ease 0.5s;
-        /* Stagger fade-in with delay */
     }
 }
 
 /* Desktop specific styles */
 @media (min-width: 769px) {
-
-    /* Styles for larger screens (desktop/tablet) */
     .checkbtn {
         display: none;
-        /* Hide hamburger icon on larger screens */
     }
 
     ul {
         display: flex;
-        /* Horizontal layout for menu items */
         flex-direction: row;
-        /* Row-based layout for desktop */
         justify-content: flex-end;
-        /* Align items to the right */
         opacity: 1;
-        /* Ensure menu is visible */
         transform: translateX(0);
-        /* Keep it in place */
     }
 
     ul li {
         margin: 0 1em;
-        /* Add space between items */
     }
 
     ul li a {
         font-size: 1.1em;
-        /* Default font size for desktop */
         padding: 0.7em;
-        /* Add padding for comfort */
     }
 }
-
-/* About Me Section */
-main {
-    padding: 2rem;
-    /* Add padding inside the main content */
-}
-
-/* .about-me {
-    max-width: 900px;
-    /* Maximum width for the about me section */
-
 
 /* Section Layout */
 section {
     display: flex;
     flex-direction: column;
-    /* Stack items vertically */
     justify-content: center;
-    /* Center content vertically */
     align-items: center;
-    /* Center content horizontally */
     padding: 1rem;
 }
 
 section h2 {
     font-size: 2.8rem;
-    /* Larger heading */
     margin-bottom: 1.2rem;
-    /* Space below heading */
     color: #2c3e50;
-    /* Dark text color */
     text-align: center;
-    /* Center-align the heading */
     font-family: 'Open Sans', sans-serif;
-    /* Clean font */
 }
 
 section p,
 section article {
     font-size: 1.2rem;
-    /* Slightly larger font size */
     color: #555;
-    /* Lighter gray text color */
     line-height: 1.8;
-    /* Improve readability */
     margin-bottom: 1.5rem;
-    /* Space below paragraph */
     text-align: justify;
-    /* Justify text for a clean look */
     max-width: 800px;
-    /* Limit width for better readability */
     margin: 0 auto;
-    /* Center-align the paragraph */
     padding: 0.5rem;
 }
 
@@ -385,7 +240,6 @@ footer {
     background-color: #333;
     color: white;
     font-size: 1rem;
-    /* Base font size */
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -399,17 +253,31 @@ footer p {
 @media (max-width: 600px) {
     footer {
         padding: 1.5rem;
-        /* Add more padding on smaller screens */
         font-size: 0.9rem;
-        /* Adjust font size for smaller screens */
     }
 }
 
 @media (max-width: 400px) {
     footer {
         padding: 1.2rem;
-        /* Slightly reduced padding for very small screens */
         font-size: 0.8rem;
-        /* Smaller font for very small screens */
     }
+}
+
+/* Email Link Styling */
+.email-link {
+    color: #3c3cec;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.email-link:hover {
+    color: #1a1ad7;
+    text-decoration: underline;
+}
+
+.email-link:focus {
+    outline: 2px solid #1a1ad7;
+    outline-offset: 2px;
 }
